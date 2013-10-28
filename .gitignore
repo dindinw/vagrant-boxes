@@ -12,3 +12,6 @@ gems/*
 .bundle/*
 
 !.gitkeep
+.ruby-version
+.ruby-gemset
+.rvmrc
