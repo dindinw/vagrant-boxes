@@ -52,6 +52,9 @@ chmod 755 /bin/sudo
 # XXX: echo "\n" prevents powershell from freezing within Cygwin, see http://serverfault.com/questions/266535/how-to-run-a-powershell-script-from-cygwin-ssh-session#comment277301_266699
 echo "\n" | powershell -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile -WindowStyle Hidden -File a:setprivate.ps1
 
+# Set the powershell execution policy to RemoteSigned
+echo "\n" | powershell -NoLogo -NonInteractive -NoProfile Set-ExecutionPolicy RemoteSigned
+
 # Configure WinRM
 cmd /c a:install-winrm.bat
 
